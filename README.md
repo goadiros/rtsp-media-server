@@ -11,7 +11,7 @@ This project uses Docker Compose to manage two containers: a video streamer and 
 
 1. Clone the repository:
 ```
-git clone github.com/goadiros/rtsp-media-server
+git clone https://github.com/goadiros/rtsp-media-server
 ```
 2. Navigate to the project directory:
 ```
