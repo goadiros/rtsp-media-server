@@ -1,0 +1,24 @@
+version: '3'
+
+services:
+  rtsp-server:
+    image: aler9/rtsp-simple-server
+    container_name: rtsp-server
+    hostname: rtsp-server
+    network_mode: host
+
+  video-streamer:
+    image: jrottenberg/ffmpeg
+    container_name: video-streamer
+    network_mode: host
+    volumes:
+      - ./data:/data
+    command: [
+      "-re",
+      "-stream_loop", "-1",
+      "-i", "/data/input.mp4",
+      "-c", "copy",
+      "-f", "rtsp", "rtsp://localhost:8554/mystream"
+    ]
+    depends_on:
+      - rtsp-server
