@@ -10,10 +10,13 @@ This project uses Docker Compose to manage two containers: a video streamer and 
 ## Installation
 
 1. Clone the repository:
-> git clone github.com/goadiros/rtsp-media-server
-
+```
+git clone github.com/goadiros/rtsp-media-server
+```
 2. Navigate to the project directory:
-> cd rtsp-media-server
+```
+cd rtsp-media-server
+```
 
 ## Usage
 
